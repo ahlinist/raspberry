@@ -11,7 +11,7 @@ class TestState(unittest.TestCase):
         self.assertEqual(State().noise, None, "Should be None")
 
     def test_motion(self):
-        self.assertEqual(State().motion, 0, "Should be 0")
+        self.assertEqual(State().motion, [], "Should be empty array")
 
 
 if __name__ == '__main__':
