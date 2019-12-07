@@ -1,5 +1,7 @@
 from state import State
 
-print(State.is_dark)
-print(State.is_noisy)
-print(State.motion)
+state = State()
+
+print(state.light)
+print(state.noise)
+print(state.motion)

@@ -1,4 +1,5 @@
 class State:
-    is_dark = True
-    is_noisy = False
-    motion = 0
+    def __init__(self):
+        self.light = None
+        self.noise = None
+        self.motion = 0
