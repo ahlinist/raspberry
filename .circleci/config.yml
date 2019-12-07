@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: run tests
+          command: |
+            python3 -m unittest discover src/tests "*_test.py"
+      - run:
+          name: build
+          command: |
+            cd src
+            zip -r ../app.zip * -x "*__pycache__/*" "*tests/*"
+      - store_artifacts:
+          path: ~/repo/app.zip
